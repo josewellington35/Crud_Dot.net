@@ -1,0 +1,51 @@
+﻿@model WebSiteControle.Models.Pessoa
+
+@{
+    ViewData["Title"] = "ExcluirPessoa";
+}
+
+<h2>ExcluirPessoa</h2>
+
+<h3>Realmente você quer excluir permanentimente ?</h3>
+<div>
+    <h4>Pessoa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SobreNome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SobreNome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Idade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Idade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+    </dl>
+    
+    <form asp-action="ExcluirPessoa">
+        <input type="hidden" asp-for="PessoaId" />
+        <input type="submit" value="Delete" class="btn btn-outline-light" /> |
+        <a asp-action="Index" class="btn btn-outline-light">Voltar para Lista</a>
+    </form>
+</div>
